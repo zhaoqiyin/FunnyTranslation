@@ -363,6 +363,15 @@ private fun RegisterForm(
         Spacer(modifier = Modifier.height(12.dp))
         val enableRegister by remember {
             derivedStateOf {
+                Log.d("loginPageyzq", "" +
+                        ", vm.passwordType = " + vm.passwordType +
+                        ", vm.isValidUsername = " + vm.isValidUsername +
+                        ", vm.isValidEmail = " + vm.isValidEmail +
+                        ", vm.verifyCode.length == 6 = " + (vm.verifyCode.length == 6) +
+                        ", UserUtils.isValidPassword(vm.password) = " + UserUtils.isValidPassword(vm.password) +
+                        "" +
+                        "" +
+                        "")
                 if (vm.passwordType == "1")
                     vm.isValidUsername && vm.isValidEmail && vm.verifyCode.length == 6 && vm.finishSetFingerPrint
                 else

@@ -48,9 +48,9 @@ fun NavGraphBuilder.addLoginRoutes(
     navController: NavHostController,
     onLoginSuccess: (UserInfoBean) -> Unit,
 ){
-    animateComposable(LoginRoute.LoginPage.route){
+    animateComposable(LoginRoute.LoginPage.route, content = {
         LoginPage(navController = navController, onLoginSuccess = onLoginSuccess)
-    }
+    })
     animateComposable(LoginRoute.ResetPasswordPage.route){
         ResetPasswordPage(navController = navController)
     }
